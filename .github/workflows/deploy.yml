@@ -16,11 +16,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
       - name: Install dependencies
         run: npm install
       - name: Build
-        # السطر ده بيمنع الفشل بسبب الـ Warnings وبيعمل Build فعلي
         run: CI=false npx vite build
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
