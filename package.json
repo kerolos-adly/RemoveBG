@@ -6,7 +6,7 @@
   "homepage": "https://kerolos-adly.github.io/RemoveBG/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -18,7 +18,8 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.1.17",
-    "@types/react": "^18.3.3",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "5.1.1",
     "tailwindcss": "4.1.17",
