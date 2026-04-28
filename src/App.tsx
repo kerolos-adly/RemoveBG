@@ -1,0 +1,6 @@
+import { useState, useRef, useCallback, useEffect } from "react";
+// ... بقية الكود الخاص بك الذي يحتوي على منطق إزالة الخلفية ...
+export default function App() {
+  // ...
+}
+
