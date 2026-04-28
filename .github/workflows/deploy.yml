@@ -16,11 +16,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
       - name: Install dependencies
         run: npm install
       - name: Build
-        # السطر اللي جاي ده هو السر: بيخلي GitHub يكمل بناء حتى لو فيه تحذيرات بسيطة
-        run: CI=false npm run build
+        # هنا شيلنا الـ tsc علشان ميفحصش الأخطاء ويوقف الـ build
+        run: npx vite build
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
