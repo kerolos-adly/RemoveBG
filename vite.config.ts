@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  // تأكد من السطر ده حرفياً (لازم يبدأ وينتهي بـ /)
+  // تأكد إن اسم المستودع بين 2 سلش وكابيتال وسمول صح
   base: "/RemoveBG/", 
   plugins: [react(), tailwindcss(), viteSingleFile()],
   resolve: {
@@ -17,8 +17,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  build: {
-    // ده بيضمن إن الملفات تتربط ببعض صح في الـ build
-    assetsDir: "./",
-  }
 });
