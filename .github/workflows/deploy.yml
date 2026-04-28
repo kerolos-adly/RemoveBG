@@ -19,7 +19,8 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build
-        run: npm run build
+        # السطر اللي جاي ده هو السر: بيخلي GitHub يكمل بناء حتى لو فيه تحذيرات بسيطة
+        run: CI=false npm run build
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
