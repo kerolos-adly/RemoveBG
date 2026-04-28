@@ -9,12 +9,25 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  // تأكد إن اسم المستودع بين 2 سلش وكابيتال وسمول صح
-  base: "/RemoveBG/", 
-  plugins: [react(), tailwindcss(), viteSingleFile()],
+  // تأكد أن اسم المستودع مكتوب صح بين السلش
+  base: "/RemoveBG/",
+  
+  plugins: [
+    react(),
+    tailwindcss(),
+    viteSingleFile()
+  ],
+  
   resolve: {
     alias: {
+      // ده بيخلي الـ @ تشير لمجلد الـ src صح
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  
+  build: {
+    // إعدادات لضمان خروج الملفات بشكل سليم
+    outDir: "dist",
+    assetsDir: "."
+  }
 });
